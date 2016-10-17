@@ -567,11 +567,11 @@ static void gif_load(Cfilepara* filepara, bool forceRGB = false)
 	}
 	while (rt != TERMINATE_RECORD_TYPE);
 
-	DGifCloseFile(gft, &ErrorCode);
+	DGifCloseFile(gft);
 	return;
 ERROR_R:
 	eDebug("[ePicLoad] <Error gif>");
-	DGifCloseFile(gft, &ErrorCode);
+	DGifCloseFile(gft);
 }
 
 //---------------------------------------------------------------------------------------------
